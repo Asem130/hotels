@@ -1,26 +1,30 @@
-class AppStrings {
-  static const onBoardingTitle1 = "See The Best Course #1";
-  static const onBoardingTitle2 = "See The Best Course #2";
-  static const onBoardingTitle3 = "See The Best Course #3";
-  static const onBoardingTitle4 = "See The Best Course #4";
-  static const onBoardingSupTitle1 =
-      "Tut app is an awesome flutter application using clean architecture #1";
-  static const onBoardingSupTitle2 =
-      "Tut app is an awesome flutter application using clean architecture #2";
-  static const onBoardingSupTitle3 =
-      "Tut app is an awesome flutter application using clean architecture #3";
-  static const onBoardingSupTitle4 =
-      "Tut app is an awesome flutter application using clean architecture #4";
-  static const skip = "skip";
-  static const userName = "userName";
-  static const password = "password";
-  static const userNameError = "please enter your username";
-  static const passwordError = "please enter your password";
-  static const forgetPassword = "Forget password";
-  static const notAMember = "Not a member";
-  static const signUp = "Sign up";
-  static const login = "login";
-  static const loading = "loading...";
-  static const tryAgainLater = "Try again later";
-  static const ok = "ok";
+class AppArabicStrings {
+  static const splashTextAr = "إبحث عن المكان الذى يناسبك";
+  static const selectLanguageAr = "اختار لغة التطبيق";
+  static const createNewAccountAr = "إنشاء حساب جديد";
+  static const signUpTitleAr = "سجل الأن واكتشف الأماكن الفاخره";
+  static const firstNameAr = "الإسم الأول";
+
+  static const lastNameAr = "الإسم الأخير";
+  static const emailAr = "البريد الإلكترونى";
+  static const passwordAr = "كلمة السر";
+  static const confirmAr = "تأكيد";
+  static const alreadyHaveAccountAr = "لديك حساب الفعل";
+  static const signInAr = "تسجيل الدخول";
+}
+
+class AppEnglishStrings {
+  static const splashTextEn = "Find the place that suits you";
+  static const selectLanguageEn = "Select the application language";
+  static const createNewAccountEn = "Create a new account";
+  static const signUpTitleEn =
+      "Register now and explore the \nlatest luxury places";
+  static const firstNameEn = "First name";
+
+  static const lastNameEn = "Last name";
+  static const emailEn = "Email";
+  static const passwordEn = "Password";
+  static const confirmEn = "Confirm";
+  static const alreadyHaveAccountEn = "Already have an aacount ?";
+  static const signInEn = "SignIn";
 }

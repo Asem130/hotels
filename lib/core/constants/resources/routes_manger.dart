@@ -1,5 +1,6 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:hotels/screens/views/chose_language.dart';
+import 'package:hotels/screens/views/login_view.dart';
 import 'package:hotels/screens/views/register_view.dart';
 import 'package:hotels/screens/views/splash_view.dart';
 
@@ -18,6 +19,7 @@ List<GetPage<dynamic>>? routes = [
   GetPage(name: Routes.splashRoute, page: () => const SplashView()),
   GetPage(name: Routes.registerRoute, page: () => const RegisterView()),
   GetPage(name: Routes.choseLanguage, page: () => const ChoseLanguage()),
+  GetPage(name: Routes.loginRoute, page: () => const LoginView()),
 ];
 
 /*

@@ -12,5 +12,7 @@ class AppColor {
   static Color grey2 = const Color(0xff797979);
   static Color white = const Color(0xffFFFFFF);
   static Color error = const Color(0xffe61f34); // red c
-  static Color black = const Color(0xff000000); // red cololor
+  static Color black = const Color(0xff000000);
+  static Color green = const Color(0xff86AB89); //
+  static Color seconPrimary = const Color(0xff803D3B); // red cololor
 }

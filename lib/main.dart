@@ -3,15 +3,16 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import 'package:hotels/controller/language_controller.dart';
+import 'package:hotels/core/constants/resources/color_manger.dart';
 import 'package:hotels/core/constants/resources/routes_manger.dart';
 import 'package:hotels/core/constants/resources/theme_manger.dart';
 import 'package:hotels/core/localization/translation.dart';
 import 'package:hotels/core/services/binding.dart';
 import 'package:hotels/core/services/services.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding();
-  initialServices();
+  await initialServices();
   runApp(const MyApp());
 }
 
@@ -28,9 +29,9 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       child: GetMaterialApp(
+        theme: controller.appTheme,
         locale: controller.language,
         initialBinding: AppBinding(),
-        theme: getApplicationTheme(),
         debugShowCheckedModeBanner: false,
         getPages: routes,
         translations: MyTranslation(),

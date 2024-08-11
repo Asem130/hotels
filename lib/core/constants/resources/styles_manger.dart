@@ -6,7 +6,7 @@ TextStyle _getTextStyle(double fontSize, FontWeight fontWeight, Color color) {
     fontSize: fontSize,
     color: color,
     fontWeight: fontWeight,
-    fontFamily: FontConstants.fontFamily,
+    fontFamily: FontConstants.enfontFamily,
   );
 }
 

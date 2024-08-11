@@ -11,7 +11,7 @@ class SplashControllerImp extends SplashController {
   @override
   goToLogin() {
     Future.delayed(const Duration(seconds: 3), () {
-      Get.toNamed(Routes.choseLanguage);
+      Get.offAllNamed(Routes.choseLanguage);
     });
   }
 

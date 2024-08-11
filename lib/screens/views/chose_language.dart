@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:hotels/controller/language_controller.dart';
 import 'package:hotels/core/constants/resources/color_manger.dart';
+import 'package:hotels/core/constants/resources/routes_manger.dart';
 import 'package:hotels/screens/widgets/localization/language_button.dart';
 
 class ChoseLanguage extends StatelessWidget {
@@ -31,7 +32,7 @@ class ChoseLanguageBody extends GetView<LanguageControllerIml> {
       children: [
         Align(
           alignment: Alignment.center,
-          child: Text('Select the \n     application language',
+          child: Text('2'.tr,
               style: Theme.of(context)
                   .textTheme
                   .headlineLarge!
@@ -44,6 +45,7 @@ class ChoseLanguageBody extends GetView<LanguageControllerIml> {
           text: 'Arabic',
           onTap: () {
             controller.changeLanguage("ar");
+            Get.offNamed(Routes.registerRoute);
           },
         ),
         SizedBox(
@@ -53,6 +55,7 @@ class ChoseLanguageBody extends GetView<LanguageControllerIml> {
           text: 'English',
           onTap: () {
             controller.changeLanguage("en");
+            Get.offNamed(Routes.registerRoute);
           },
         ),
       ],
