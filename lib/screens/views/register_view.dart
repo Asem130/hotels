@@ -9,10 +9,7 @@ class RegisterView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColor.primary,
-      body: const Padding(
-        padding: EdgeInsets.all(24),
-        child: RegisterViewBody(),
-      ),
+      body: const RegisterViewBody(),
     );
   }
 }

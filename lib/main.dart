@@ -1,17 +1,18 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 
 import 'package:hotels/controller/language_controller.dart';
-import 'package:hotels/core/constants/resources/color_manger.dart';
 import 'package:hotels/core/constants/resources/routes_manger.dart';
-import 'package:hotels/core/constants/resources/theme_manger.dart';
 import 'package:hotels/core/localization/translation.dart';
 import 'package:hotels/core/services/binding.dart';
 import 'package:hotels/core/services/services.dart';
 
 void main() async {
   WidgetsFlutterBinding();
+
   await initialServices();
   runApp(const MyApp());
 }

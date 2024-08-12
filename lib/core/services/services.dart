@@ -1,4 +1,6 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:get/get.dart';
+import 'package:hotels/firebase_options.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class MyServices extends GetxService {
@@ -11,4 +13,7 @@ class MyServices extends GetxService {
 
 initialServices() async  {
   await Get.putAsync(() => MyServices().init()) ; 
+await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 }

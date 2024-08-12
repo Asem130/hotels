@@ -28,12 +28,20 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  carousel_slider: ^5.0.0
+  cloud_firestore: ^4.17.5
   cupertino_icons: ^1.0.6
+  firebase_auth: ^4.16.0
+  firebase_core: ^2.24.2
+  firebase_storage: ^11.6.0
   flutter:
     sdk: flutter
+  flutter_otp_text_field: ^1.1.3+2
   flutter_screenutil: ^5.9.3
+  fluttertoast: ^8.2.6
   get: ^4.6.6
-  git: ^2.3.0
+  lottie: ^3.1.2
+  modal_progress_hud_nsn: ^0.5.1
   shared_preferences: ^2.3.1
 
 dev_dependencies:
@@ -53,6 +61,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/lottie/
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -67,7 +76,7 @@ flutter:
     - family: Marcellus
       fonts:
         - asset: assets/fonts/Marcellus-Regular.ttf
-  #         style: italic
+    #         style: italic
     - family: Kufam
       fonts:
         - asset: assets/fonts/Kufam-Regular.ttf
