@@ -9,7 +9,9 @@ import 'package:hotels/core/functions/show_toast.dart';
 
 abstract class RegisterController extends GetxController {
   registerUsingEmailAndPassword(
-      String email, String password, String firstName, String lastName);
+    String email,
+    String password,
+  );
   goToLogin();
 }
 
@@ -20,6 +22,8 @@ class RegisterControllerImp extends RegisterController {
   late TextEditingController lastName;
   late TextEditingController password;
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  var auth = FirebaseAuth.instance;
+
   States registerState = States.non;
   @override
   goToLogin() {
@@ -29,23 +33,25 @@ class RegisterControllerImp extends RegisterController {
   CollectionReference users = FirebaseFirestore.instance.collection('users');
   @override
   registerUsingEmailAndPassword(
-      String email, String password, String firstName, String lastName) async {
+    String email,
+    String password,
+  ) async {
     if (formKey.currentState!.validate()) {
       if (await checkInternet()) {
         registerState = States.loading;
         inAsyncCall = true;
         update();
         try {
-          final credential =
-              await FirebaseAuth.instance.createUserWithEmailAndPassword(
+          final credential = await auth.createUserWithEmailAndPassword(
             email: email,
             password: password,
           );
 
-          toastShow("Success", ToastStates.SUCCESS);
+          toastShow("we send link to Confirm your Email", ToastStates.SUCCESS);
+          auth.currentUser!.sendEmailVerification();
+          addUser();
           inAsyncCall = false;
           update();
-          await addUser(firstName, lastName);
 
           goToLogin();
           registerState = States.sucess;
@@ -76,6 +82,17 @@ class RegisterControllerImp extends RegisterController {
     }
   }
 
+  Future<void> addUser() {
+    // Call the user's CollectionReference to add a new user
+    return users
+        .add({
+          'full_name': {'${firstName.text} ${lastName.text}'}, // John Doe
+          // 42
+        })
+        .then((value) => print("User Added"))
+        .catchError((error) => print("Failed to add user: $error"));
+  }
+
   @override
   void onInit() {
     firstName = TextEditingController();
@@ -92,16 +109,5 @@ class RegisterControllerImp extends RegisterController {
     email.dispose();
     password.dispose();
     super.onClose();
-  }
-
-  Future<void> addUser(String firstName, String lastName) {
-    // Call the user's CollectionReference to add a new user
-    return users
-        .add({
-          'firstName': firstName, // John Doe
-          'lastName': lastName, // Stokes and Sons
-        })
-        .then((value) => print("User Added"))
-        .catchError((error) => print("Failed to add user: $error"));
   }
 }

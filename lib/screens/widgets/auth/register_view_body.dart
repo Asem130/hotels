@@ -92,7 +92,7 @@ class RegisterViewBody extends StatelessWidget {
                       CustomAuthTextFeild(
                         controller: controller.email,
                         validatior: (val) {
-                          return validInput(val!, 3, 20, "email");
+                          return validInput(val!, 3, 50, "email");
                         },
                         prefixIcon: Icon(
                           Icons.email_outlined,
@@ -125,10 +125,9 @@ class RegisterViewBody extends StatelessWidget {
                           text: "9".tr,
                           onTap: () {
                             controller.registerUsingEmailAndPassword(
-                                controller.email.text,
-                                controller.email.text,
-                                controller.firstName.text,
-                                controller.lastName.text);
+                              controller.email.text,
+                              controller.email.text,
+                            );
                           }),
                       Row(
                         children: [

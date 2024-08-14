@@ -11,9 +11,10 @@ class MyServices extends GetxService {
   }
 }
 
-initialServices() async  {
-  await Get.putAsync(() => MyServices().init()) ; 
-await Firebase.initializeApp(
+initialServices() async {
+   
+  await Get.putAsync(() => MyServices().init());
+  await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
 }

@@ -92,6 +92,10 @@ class LoginViewBody extends StatelessWidget {
                           text: "9".tr,
                           onTap: () {
                             controller.goToHome();
+                           /* controller.login(
+                              controller.email.text,
+                              controller.password.text,
+                            );*/
                           }),
                       Row(
                         children: [

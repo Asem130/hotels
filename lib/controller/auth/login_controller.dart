@@ -16,6 +16,7 @@ class LoginControllerImp extends LoginController {
   late TextEditingController password;
   late TextEditingController email;
   bool inAsyncCall = false;
+  var auth = FirebaseAuth.instance;
 
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
   States loginStates = States.non;
@@ -54,21 +55,9 @@ class LoginControllerImp extends LoginController {
         try {
           final credential = await FirebaseAuth.instance
               .signInWithEmailAndPassword(email: email, password: password);
-        } on FirebaseAuthException catch (e) {
-          if (e.code == 'user-not-found') {
-            print('No user found for that email.');
-          } else if (e.code == 'wrong-password') {
-            print('Wrong password provided for that user.');
-          }
-        }
-        /*     try {
-          final credential = await FirebaseAuth.instance
-              .signInWithEmailAndPassword(email: email, password: password);
           toastShow("Success", ToastStates.SUCCESS);
-
           inAsyncCall = false;
           update();
-
           goToHome();
           loginStates = States.sucess;
         } on FirebaseAuthException catch (e) {
@@ -80,16 +69,16 @@ class LoginControllerImp extends LoginController {
           } else if (e.code == 'wrong-password') {
             loginStates = States.weakPassword;
             inAsyncCall = false;
-
             toastShow("wrong-password", ToastStates.ERROR);
             update();
           }
-        }*/
+        }
       } else {
         Get.offAllNamed(Routes.noInternetConection);
         return loginStates = States.offlinefailure;
       }
     }
+
     update();
   }
 }

@@ -6,6 +6,7 @@ import 'package:hotels/screens/views/home_view.dart';
 import 'package:hotels/screens/views/register_view.dart';
 import 'package:hotels/screens/views/splash_view.dart';
 import 'package:hotels/screens/widgets/auth/no_internet_connection.dart';
+import 'package:hotels/test.dart';
 
 class Routes {
   static const String splashRoute = "/";
@@ -19,6 +20,7 @@ class Routes {
 
   static const String choseLanguage = "/choseLanguage";
   static const String noInternetConection = "/noInternetConection";
+  static const String test = "/test";
 }
 
 List<GetPage<dynamic>>? routes = [
@@ -31,6 +33,7 @@ List<GetPage<dynamic>>? routes = [
   GetPage(name: Routes.choseLanguage, page: () => const ChoseLanguage()),
   GetPage(name: Routes.looginRoute, page: () => const LoginView()),
   GetPage(name: Routes.homeRoute, page: () => const HomeView()),
+  GetPage(name: Routes.test, page: () => const test()),
 ];
 
 /*

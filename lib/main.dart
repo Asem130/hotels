@@ -12,7 +12,6 @@ import 'package:hotels/core/services/services.dart';
 
 void main() async {
   WidgetsFlutterBinding();
-
   await initialServices();
   runApp(const MyApp());
 }
