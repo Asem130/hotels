@@ -3,9 +3,10 @@ import 'package:hotels/screens/views/auth/confirm_email.dart';
 import 'package:hotels/screens/views/chose_language.dart';
 import 'package:hotels/screens/views/auth/login_view.dart';
 import 'package:hotels/screens/views/home_view.dart';
-import 'package:hotels/screens/views/register_view.dart';
+import 'package:hotels/screens/views/auth/register_view.dart';
 import 'package:hotels/screens/views/splash_view.dart';
 import 'package:hotels/screens/widgets/auth/no_internet_connection.dart';
+import 'package:hotels/screens/widgets/home/hotel/hotel_mainview.dart';
 import 'package:hotels/test.dart';
 
 class Routes {
@@ -21,6 +22,7 @@ class Routes {
   static const String choseLanguage = "/choseLanguage";
   static const String noInternetConection = "/noInternetConection";
   static const String test = "/test";
+  static const String HotelMainView = "/HotelMainView";
 }
 
 List<GetPage<dynamic>>? routes = [
@@ -34,6 +36,7 @@ List<GetPage<dynamic>>? routes = [
   GetPage(name: Routes.looginRoute, page: () => const LoginView()),
   GetPage(name: Routes.homeRoute, page: () => const HomeView()),
   GetPage(name: Routes.test, page: () => const test()),
+  GetPage(name: Routes.HotelMainView, page: () => const HotelMainView()),
 ];
 
 /*

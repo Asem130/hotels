@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hotels/core/constants/resources/color_manger.dart';
 import 'package:hotels/core/constants/resources/values_manger.dart';
+import 'package:hotels/data/remote/model/hotel.dart';
 
 class PopularHotelItem extends StatelessWidget {
-  const PopularHotelItem({super.key});
-
+  const PopularHotelItem({super.key, required this.hotel});
+  final HotelModel hotel;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -25,8 +26,8 @@ class PopularHotelItem extends StatelessWidget {
               borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(AppSize.s8),
                   topRight: Radius.circular(AppSize.s8)),
-              child: Image.asset(
-                'assets/images/imge.jpg',
+              child: Image.network(
+                hotel.mainImage,
                 fit: BoxFit.fill,
               ),
             ),
@@ -38,7 +39,7 @@ class PopularHotelItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Cairo',
+                  hotel.name,
                   style: Theme.of(context)
                       .textTheme
                       .headlineMedium!
@@ -46,7 +47,7 @@ class PopularHotelItem extends StatelessWidget {
                 ),
                 Text('Egypt-Sina',
                     style: Theme.of(context).textTheme.bodyLarge!),
-                Text('1505\$',
+                Text('${hotel.price}\$',
                     style: Theme.of(context)
                         .textTheme
                         .bodyLarge!
