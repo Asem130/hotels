@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:hotels/core/constants/resources/color_manger.dart';
 
-import 'package:hotels/screens/widgets/home/homeview.dart';
+import 'package:hotels/screens/widgets/home/home_view_body.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});

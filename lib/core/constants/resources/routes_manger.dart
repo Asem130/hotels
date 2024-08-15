@@ -6,7 +6,7 @@ import 'package:hotels/screens/views/home_view.dart';
 import 'package:hotels/screens/views/auth/register_view.dart';
 import 'package:hotels/screens/views/splash_view.dart';
 import 'package:hotels/screens/widgets/auth/no_internet_connection.dart';
-import 'package:hotels/screens/widgets/home/hotel/hotel_mainview.dart';
+import 'package:hotels/screens/views/hotel_mainview.dart';
 import 'package:hotels/test.dart';
 
 class Routes {

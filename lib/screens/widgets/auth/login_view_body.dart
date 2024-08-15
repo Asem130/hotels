@@ -40,11 +40,15 @@ class LoginViewBody extends StatelessWidget {
                           height: 200.h,
                         ),
                       ),
-                      Text("3".tr,
-                          style: Theme.of(context)
-                              .textTheme
-                              .headlineMedium!
-                              .copyWith(color: AppColor.seconPrimary)),
+                      Text(
+                        "3".tr,
+                        style: Theme.of(context)
+                            .textTheme
+                            .headlineMedium!
+                            .copyWith(
+                              color: AppColor.seconPrimary,
+                            ),
+                      ),
                       SizedBox(
                         height: 20.h,
                       ),
@@ -59,7 +63,7 @@ class LoginViewBody extends StatelessWidget {
                       CustomAuthTextFeild(
                         controller: controller.email,
                         validatior: (val) {
-                          return validInput(val!, 3, 20, "email");
+                          return validInput(val!, 3, 30, "email");
                         },
                         prefixIcon: Icon(
                           Icons.email_outlined,
@@ -75,7 +79,7 @@ class LoginViewBody extends StatelessWidget {
                       CustomAuthTextFeild(
                         controller: controller.password,
                         validatior: (val) {
-                          return validInput(val!, 3, 20, "password");
+                          return validInput(val!, 3, 30, "password");
                         },
                         prefixIcon: Icon(
                           Icons.remove_red_eye_rounded,
@@ -92,10 +96,10 @@ class LoginViewBody extends StatelessWidget {
                           text: "9".tr,
                           onTap: () {
                             controller.goToHome();
-                           /* controller.login(
-                              controller.email.text,
-                              controller.password.text,
-                            );*/
+                            // controller.login(
+                            //   controller.email.text,
+                            //   controller.password.text,
+                            // );
                           }),
                       Row(
                         children: [

@@ -28,31 +28,43 @@ class PopularHotelItem extends StatelessWidget {
                   topRight: Radius.circular(AppSize.s8)),
               child: Image.network(
                 hotel.mainImage,
+                width: 120.w,
+                height: 75.h,
                 fit: BoxFit.fill,
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  hotel.name,
-                  style: Theme.of(context)
-                      .textTheme
-                      .headlineMedium!
-                      .copyWith(fontSize: 18, color: AppColor.black),
-                ),
-                Text('Egypt-Sina',
-                    style: Theme.of(context).textTheme.bodyLarge!),
-                Text('${hotel.price}\$',
+          SizedBox(
+            height: 75.h,
+            width: 120.w,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    hotel.name,
                     style: Theme.of(context)
                         .textTheme
-                        .bodyLarge!
-                        .copyWith(color: Colors.green)),
-              ],
+                        .headlineMedium!
+                        .copyWith(fontSize: 18.sp, color: AppColor.black),
+                  ),
+                  Text('Egypt-Sina',
+                      style: Theme.of(context)
+                          .textTheme
+                          .labelMedium!
+                          .copyWith(fontSize: 12.sp, color: AppColor.gery)),
+                  SizedBox(
+                    height: 5.h,
+                  ),
+                  Text('${hotel.price}\$',
+                      style: Theme.of(context)
+                          .textTheme
+                          .labelSmall!
+                          .copyWith(color: Colors.green)),
+                ],
+              ),
             ),
           )
         ],

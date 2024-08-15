@@ -53,11 +53,11 @@ class LoginControllerImp extends LoginController {
         update();
 
         try {
-          final credential = await FirebaseAuth.instance
+          await FirebaseAuth.instance
               .signInWithEmailAndPassword(email: email, password: password);
           toastShow("Success", ToastStates.SUCCESS);
           inAsyncCall = false;
-          update();
+
           goToHome();
           loginStates = States.sucess;
         } on FirebaseAuthException catch (e) {
