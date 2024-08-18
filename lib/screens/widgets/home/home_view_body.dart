@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
+import 'package:hotels/controller/home_controller.dart';
 import 'package:hotels/core/constants/resources/color_manger.dart';
 import 'package:hotels/screens/widgets/home/discover_listview.dart';
 import 'package:hotels/screens/widgets/home/home_carousal_slider.dart';
 import 'package:hotels/screens/widgets/home/home_search.dart';
 import 'package:hotels/screens/widgets/home/popular_hotels_listview.dart';
 
-class HomeViewBody extends StatelessWidget {
+class HomeViewBody extends GetView<HomeControllerImp> {
   const HomeViewBody({super.key});
 
   @override
@@ -32,7 +34,7 @@ class HomeViewBody extends StatelessWidget {
               ),
               const Spacer(),
               IconButton(
-                icon: Icon(Icons.arrow_forward_ios),
+                icon: const Icon(Icons.arrow_forward_ios),
                 color: AppColor.seconPrimary,
                 onPressed: () {},
               )

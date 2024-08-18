@@ -12,7 +12,7 @@ class HomeControllerImp extends HomeController {
 
   List<HotelModel> popularHotels = [];
   List<HotelModel> allHotels = [];
-
+  bool isData = true;
   goToHotelMainView() {
     Get.toNamed(Routes.HotelMainView);
   }
@@ -56,6 +56,7 @@ class HomeControllerImp extends HomeController {
   @override
   void onInit() async {
     await getData();
+    isData = false;
     await getAllHotels();
     await getPopularHotels();
 
