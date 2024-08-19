@@ -9,5 +9,6 @@ class AppBinding extends Bindings {
     Get.put(SplashControllerImp());
     Get.put(RegisterControllerImp());
     Get.put(LoginControllerImp());
+
   }
 }

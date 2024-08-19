@@ -6,7 +6,7 @@ import 'package:hotels/screens/views/home_view.dart';
 import 'package:hotels/screens/views/auth/register_view.dart';
 import 'package:hotels/screens/views/splash_view.dart';
 import 'package:hotels/screens/widgets/auth/no_internet_connection.dart';
-import 'package:hotels/screens/views/hotel_mainview.dart';
+import 'package:hotels/screens/views/hotel_homeview.dart';
 import 'package:hotels/test.dart';
 
 class Routes {
@@ -36,7 +36,7 @@ List<GetPage<dynamic>>? routes = [
   GetPage(name: Routes.looginRoute, page: () => const LoginView()),
   GetPage(name: Routes.homeRoute, page: () => const HomeView()),
   GetPage(name: Routes.test, page: () => const test()),
-  GetPage(name: Routes.HotelMainView, page: () => const HotelMainView()),
+  GetPage(name: Routes.HotelMainView, page: () => const HotelHomeView()),
 ];
 
 /*

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:hotels/core/constants/resources/color_manger.dart';
 import 'package:hotels/core/constants/resources/values_manger.dart';
 
 class FloatingContanier extends StatelessWidget {
@@ -8,144 +7,88 @@ class FloatingContanier extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return Container(
+      decoration: BoxDecoration(
+          color: const Color.fromARGB(255, 255, 255, 255),
+          borderRadius: BorderRadius.circular(24)),
+      height: 150.h,
+      width: MediaQuery.of(context).size.width,
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24.w),
-        child: Padding(
-          padding: EdgeInsets.only(top: 200.h),
-          child: Container(
-            decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 255, 255, 255),
-                borderRadius: BorderRadius.circular(24)),
-            height: 200.h,
-            width: MediaQuery.of(context).size.width,
-            child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+        padding: const EdgeInsets.all(8),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Sanstefano',
+              style: Theme.of(context).textTheme.headlineSmall,
+            ),
+            SizedBox(
+              height: 5.h,
+            ),
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text(
-                    'Sanstefano',
-                    style: Theme.of(context).textTheme.headlineMedium,
+                  Container(
+                    height: 40.h,
+                    width: 40.w,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(AppSize.s8.r),
+                      image: const DecorationImage(
+                          image: AssetImage(
+                            'assets/images/imge.jpg',
+                          ),
+                          fit: BoxFit.cover),
+                    ),
                   ),
                   SizedBox(
-                    height: 10.h,
+                    width: 30.w,
                   ),
                   SizedBox(
-                    width: MediaQuery.of(context).size.width,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                    height: 40.h,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
-                          height: 80.h,
-                          width: 50.w,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(AppSize.s8.r),
-                            image: const DecorationImage(
-                                image: AssetImage(
-                                  'assets/images/imge.jpg',
-                                ),
-                                fit: BoxFit.cover),
-                          ),
+                        Text(
+                          'Sina - Egypt',
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineSmall!
+                              .copyWith(),
                         ),
-                        SizedBox(
-                          width: 30.w,
-                        ),
-                        SizedBox(
-                          height: 80.h,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Sina - Egypt',
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .headlineMedium!
-                                    .copyWith(fontSize: 16),
-                              ),
-                              const Spacer(
-                                flex: 1,
-                              ),
-                              Row(
-                                children: [
-                                  const Icon(Icons.location_city),
-                                  SizedBox(
-                                    width: 10.w,
-                                  ),
-                                  Text('location',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .headlineMedium!
-                                          .copyWith(fontSize: 16.sp)),
-                                  IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(
-                                        Icons.arrow_forward_ios,
-                                      ))
-                                ],
-                              ),
-                              const Spacer(
-                                flex: 1,
-                              ),
-                              Row(
-                                children: [
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(8),
-                                      color: Colors.green,
-                                    ),
-                                    width: 30.w,
-                                    height: 20.h,
-                                    child: Center(
-                                      child: Text('9.4',
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .headlineMedium!
-                                              .copyWith(
-                                                  fontSize: 16.sp,
-                                                  fontWeight: FontWeight.w500)),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 10.w,
-                                  ),
-                                  Text('Exceptional',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .headlineMedium!
-                                          .copyWith(fontSize: 16.sp))
-                                ],
-                              ),
-                            ],
-                          ),
+                        Row(
+                          children: [
+                            const Icon(
+                              Icons.location_city,
+                              size: 5,
+                            ),
+                            SizedBox(
+                              width: 10.w,
+                            ),
+                            Text(
+                              'location',
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .headlineSmall!
+                                  .copyWith(),
+                            ),
+                            IconButton(
+                                onPressed: () {},
+                                icon: const Icon(
+                                  Icons.arrow_forward_ios,
+                                  size: 5,
+                                ))
+                          ],
                         ),
                       ],
                     ),
                   ),
-                  const Spacer(),
-                  Row(
-                    children: [
-                      IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.chat,
-                            color: AppColor.seconPrimary,
-                          )),
-                      const Spacer(),
-                      Text(
-                        "5251\$",
-                        style: Theme.of(context)
-                            .textTheme
-                            .headlineLarge!
-                            .copyWith(fontSize: 20.sp),
-                      ),
-                    ],
-                  )
                 ],
               ),
             ),
-          ),
+          ],
         ),
       ),
     );
