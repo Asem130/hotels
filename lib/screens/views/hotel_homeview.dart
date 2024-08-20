@@ -8,7 +8,7 @@ class HotelHomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.primary,
+      backgroundColor: AppColor.white,
       body: const HotelHomeViewBody(),
     );
   }

@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       child: GetMaterialApp(
+        
         theme: controller.appTheme,
         locale: controller.language,
         initialBinding: AppBinding(),

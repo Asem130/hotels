@@ -12,10 +12,10 @@ class PopularAnemitinalList extends StatelessWidget {
       shrinkWrap: true,
       clipBehavior: Clip.hardEdge,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 3,
-        childAspectRatio: 1.9,
-        crossAxisSpacing: 0,
-        mainAxisSpacing: 15,
+        crossAxisCount: 2,
+        childAspectRatio: 2 / 0.5,
+        crossAxisSpacing: 1,
+        mainAxisSpacing: 0.5,
       ),
       itemBuilder: (context, index) => const PopularAnemitinalItem(),
     );

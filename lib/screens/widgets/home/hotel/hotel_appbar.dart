@@ -14,12 +14,39 @@ class HotelAppBar extends GetView<HotelHomeController> {
   Widget build(BuildContext context) {
     HomeControllerImp homeContrller = Get.find();
     return SliverAppBar(
+      actions: [
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
+              width: 38,
+              height: 38,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(80),
+                  color: const Color(0xfF08060C)),
+              child: Icon(
+                Icons.share,
+                color: AppColor.primary,
+              )),
+        )
+      ],
+      elevation: 100,
+      leading: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(80),
+                color: const Color(0xfF08060C)),
+            child: Icon(
+              Icons.arrow_back,
+              color: AppColor.primary,
+            )),
+      ),
       centerTitle: true,
       floating: false,
       expandedHeight: 200.h,
       pinned: true,
       stretch: true,
-      backgroundColor: AppColor.primary,
+      backgroundColor: AppColor.black,
       flexibleSpace: FlexibleSpaceBar(
         collapseMode: CollapseMode.parallax,
         expandedTitleScale: 1,

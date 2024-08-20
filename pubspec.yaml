@@ -45,6 +45,8 @@ dependencies:
   google_maps_flutter: ^2.9.0
   lottie: ^3.1.2
   modal_progress_hud_nsn: ^0.5.1
+  read_more_text: ^0.0.5
+  readmore: ^3.0.0
   shared_preferences: ^2.3.1
   shimmer: ^3.0.0
 
@@ -86,7 +88,7 @@ flutter:
         - asset: assets/fonts/Kufam-Regular.ttf
     - family: DancingScript
       fonts:
-        - asset: assets/fonts/DancingScript-Regular.ttf    
+        - asset: assets/fonts/DancingScript-Regular.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #

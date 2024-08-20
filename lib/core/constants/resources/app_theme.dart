@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hotels/core/constants/resources/color_manger.dart';
 
 ThemeData themeEnglish = ThemeData(
+  useMaterial3: true,
   fontFamily: "Marcellus",
   textTheme: TextTheme(
       headlineLarge: TextStyle(
@@ -18,6 +19,7 @@ ThemeData themeEnglish = ThemeData(
 );
 
 ThemeData themeArabic = ThemeData(
+  useMaterial3: false,
   fontFamily: "Kufam",
   textTheme: TextTheme(
       headlineLarge: TextStyle(

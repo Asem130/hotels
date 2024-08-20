@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hotels/core/constants/resources/color_manger.dart';
 
 class PopularAnemitinalItem extends StatelessWidget {
   const PopularAnemitinalItem({super.key});
@@ -8,14 +9,18 @@ class PopularAnemitinalItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(Icons.restaurant),
+        Icon(
+          Icons.wifi,
+          size: 20,
+          color: AppColor.black,
+        ),
         SizedBox(
           width: 10.w,
         ),
         Text(
-          'Resturant',
+          'Free Wifi',
           style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-              color: Colors.black,
+              color: AppColor.darkPrimary,
               fontSize: 12.sp,
               fontWeight: FontWeight.w900),
         ),
