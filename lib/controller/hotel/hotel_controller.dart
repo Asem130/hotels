@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hotels/core/constants/resources/routes_manger.dart';
 
-class HotelHomeController extends GetxController
+abstract class HotelHomeController extends GetxController {
+  goToResturantView();
+}
+
+class HotelHomeControllerImp extends HotelHomeController
     with GetTickerProviderStateMixin {
   late TabController tabController;
 
@@ -15,5 +20,10 @@ class HotelHomeController extends GetxController
   void onClose() {
     tabController.dispose();
     super.onClose();
+  }
+
+  @override
+  goToResturantView() {
+    Get.toNamed(Routes.resturanHomeView);
   }
 }

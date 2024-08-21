@@ -14,7 +14,7 @@ class HomeControllerImp extends HomeController {
   List<HotelModel> allHotels = [];
   bool isData = true;
   goToHotelMainView() {
-    Get.toNamed(Routes.HotelMainView);
+    Get.toNamed(Routes.hotelMainView);
   }
 
   getPopularHotels() async {

@@ -66,6 +66,12 @@ class HomeViewBody extends GetView<HomeControllerImp> {
           ),
         ),
         const SliverToBoxAdapter(child: DiscoverListView()),
+        SliverToBoxAdapter(
+          child: SizedBox(
+            height: 15.h,
+          ),
+        ),
+        const SliverToBoxAdapter(child: DiscoverListView()),
       ],
     );
   }
